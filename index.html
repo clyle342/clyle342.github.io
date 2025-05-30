@@ -1,55 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clyle Ndombi | Cloud & Linux Enthusiast</title>
-    <link rel="stylesheet" href="C:\Users\Kali\Desktop\personal_website\style.css">
-    <link rel="icon" href="C:\Users\Kali\Desktop\personal_website\favico.ico" type="image/x-icon">
-    <link rel="script" href="C:\Users\Kali\Desktop\personal_website\script.js">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clyle Ndombi | Cloud & Linux Enthusiast</title>
+  <link rel="icon" href="favico.ico" type="image/x-icon" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>
-           Hello, I'm Clyle Ndombi!
-        </h1>
-        <p>
-            Cloud & Linux Enthusiast | AWS Certified Cloud Practitioner (Ajira AWS re/Start) | Andela KCNA Trainee | DevOps Engineer in Training | Open Source Contributor
-        </p>
-        <nav class="navbar">
-            <button class="menu-toggle">☰</button>
-            <div>
-                <a href="#skills">Skills</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#contact">Contact</a>
-            </div>
-            
-        </nav>
-        <section id="contact">
-            <a href="https://www.linkedin.com/in/clyle-ndombi-14959a366/" target="_blank">LinkedIn</a>
-            <a href="mailto:clyle102@gmail.com">Email</a>
-            <a href="https://github.com/clyle342" target="_blank">GitHub</a>
-        </section>
-    </header>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <header class="bg-gray-900 text-white p-6 text-center">
+    <h1 class="text-3xl font-bold mb-2">Hello, I'm Clyle Ndombi!</h1>
+    <p class="text-blue-300 max-w-xl mx-auto">
+      Cloud & Linux Enthusiast | AWS Certified Cloud Practitioner (Ajira AWS re/Start) | Andela KCNA Trainee | DevOps Engineer in Training | Open Source Contributor
+    </p>
+
+    <nav class="mt-4">
+      <button id="menu-toggle" class="md:hidden text-3xl">☰</button>
+      <div id="menu" class="hidden md:flex justify-center gap-6 mt-4">
+        <a href="#skills" class="hover:underline text-blue-400">Skills</a>
+        <a href="#certifications" class="hover:underline text-blue-400">Certifications</a>
+        <a href="#contact" class="hover:underline text-blue-400">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 👇 Profile image placed below the header -->
+  <div class="flex justify-center mt-10">
+    <img 
+      src="profile_picture.png" 
+      alt="Clyle Ndombi" 
+      style="
+        width: 160px; 
+        height: 160px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+        object-position: top;
+        border: 4px solid #3b82f6;
+      "
+    />
+  </div>
+
+  <main class="max-w-3xl mx-auto p-6 space-y-10">
     <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Cloud Computing</li>
-            <li>Linux CLI & Bash</li>
-            <li>DevOps Practices</li>
-            <li>Python, Git, SQL</li>
-            <li>Data Analytics</li>
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-400 pb-2 mb-4">Skills</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Cloud Computing</li>
+        <li>Linux CLI & Bash</li>
+        <li>DevOps Practices</li>
+        <li>Python, Git, SQL</li>
+        <li>Data Analytics</li>
+      </ul>
     </section>
+
     <section id="certifications">
-        Certifcations
-        <ul>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Ajira AWS re/Start Graduate</li>
-            <li>Andela KCNA Trainee</li>
-            <li>ALX Data Analytics</li>
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-400 pb-2 mb-4">Certifications</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>Ajira AWS re/Start Graduate</li>
+        <li>Andela KCNA Trainee</li>
+        <li>ALX Data Analytics</li>
+      </ul>
     </section>
-    <footer>
-        <p>&#xa9 2025 Clyle Ndombi</p>
-    </footer>
+
+    <section id="contact" class="text-center">
+      <h2 class="text-2xl font-semibold border-b-2 border-blue-400 pb-2 mb-4">Contact Me</h2>
+      <p class="space-x-6">
+        <a href="https://www.linkedin.com/in/clyle-ndombi-14959a366/" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a>
+        <a href="mailto:clyle102@gmail.com" class="text-blue-500 hover:underline">Email</a>
+        <a href="https://github.com/clyle342" target="_blank" class="text-blue-500 hover:underline">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="text-center p-4 bg-gray-200 mt-12">
+    <p>© 2025 Clyle Ndombi</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
